@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jay Ambe Pan and Colddrinks and Ice Cream Parlour – Taste that stays." />
+  <title>Jay Ambe Pan & Colddrinks</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background-color: #fff8f0; color: #333; }
+    header { background-color: #3a0ca3; color: white; padding: 1rem; text-align: center; }
+    h1 { margin: 0; }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .product-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .product-card img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 18px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jay Ambe Pan and Colddrinks and Ice Cream Parlour</h1>
+  </header>  <section class="product-grid">
+    <div class="product-card">
+      <img src="images/mitha-pan.jpg" alt="Mitha Pan">
+      <h3>Mitha Pan</h3>
+      <p>Sweet betel leaf with delightful toppings</p>
+    </div>
+    <div class="product-card">
+      <img src="images/icecream.jpg" alt="Ice Cream">
+      <h3>Slice Cassata Ice Cream</h3>
+      <p>Cool, creamy, and perfect for summer</p>
+    </div>
+    <div class="product-card">
+      <img src="images/shrikhand.jpg" alt="Shrikhand">
+      <h3>Shrikhand</h3>
+      <p>Rich and creamy traditional dessert</p>
+    </div>
+    <div class="product-card">
+      <img src="images/colddrink.jpg" alt="Cold Drinks">
+      <h3>Colddrinks</h3>
+      <p>Chilled drinks to refresh your day</p>
+    </div>
+  </section>  <a href="https://wa.me/9016033730" class="whatsapp-button" target="_blank">
+    Chat on WhatsApp
+  </a>  <footer>
+    <p>&copy; 2025 Jay Ambe Pan and Colddrinks and Ice Cream Parlour. All rights reserved.</p>
+  </footer>
+</body>
+</html>
