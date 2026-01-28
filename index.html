@@ -2,131 +2,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jay Ambe Pan and Colddrinks</title>
+  <title>Jay Ambe Pan & Coldrinks</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #fafafa;
-      color: #333;
+    :root{
+      --primary:#0f766e; /* classy green */
+      --accent:#dc2626;  /* coke red */
+      --bg:#ffffff;
+      --muted:#6b7280;
+      --card:#f8fafc;
     }
-    header {
-      background-color: #004d40;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #00796b;
-      padding: 10px 0;
-    }
-    nav a {
-      margin: 0 15px;
-      color: white;
-      text-decoration: none;
-    }
-    .container {
-      padding: 20px;
-    }
-    .category {
-      margin-bottom: 30px;
-    }
-    .category h2 {
-      color: #00695c;
-      border-bottom: 2px solid #004d40;
-      padding-bottom: 5px;
-    }
-    .product {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 10px 0;
-    }
-    .product input {
-      width: 50px;
-    }
-    button {
-      background-color: #004d40;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #004d40;
-      color: white;
-      margin-top: 30px;
-    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; background:var(--bg); color:#111}
+    a{text-decoration:none;color:inherit}/* Header */
+header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #eee}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+.brand{font-weight:800;font-size:18px}
+.cta{background:var(--primary);color:#fff;padding:10px 14px;border-radius:10px;font-weight:700}
+
+/* Hero */
+.hero{max-width:1100px;margin:24px auto;padding:0 16px;display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
+.hero-card{background:linear-gradient(135deg,#ecfeff,#f0fdf4);border-radius:18px;padding:24px}
+.hero h1{margin:0 0 8px;font-size:28px}
+.hero p{color:var(--muted);margin:0 0 14px}
+.hero .buttons{display:flex;gap:10px;flex-wrap:wrap}
+.btn{padding:12px 16px;border-radius:12px;font-weight:800}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.outline{border:2px solid var(--primary);color:var(--primary)}
+.hero-img{border-radius:18px;min-height:180px;background:url('images/hero.jpg') center/cover no-repeat}
+
+/* Categories */
+.wrap{max-width:1100px;margin:auto;padding:0 16px}
+.section-title{display:flex;align-items:center;justify-content:space-between;margin:28px 0 12px}
+.section-title h2{margin:0}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:#eef2f7;border-radius:999px;padding:8px 12px;font-weight:700;font-size:14px}
+
+/* Products Grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid #e5e7eb;border-radius:16px;padding:10px}
+.card img{width:100%;height:120px;object-fit:cover;border-radius:12px}
+.card h3{margin:8px 0 2px;font-size:15px}
+.price{font-weight:900}
+.note{font-size:12px;color:var(--muted)}
+.order{margin-top:8px;display:block;text-align:center;background:var(--accent);color:#fff;padding:10px;border-radius:10px;font-weight:800}
+
+/* Why us */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:28px 0}
+.why .w{border:1px dashed #e5e7eb;border-radius:16px;padding:14px}
+
+/* Footer */
+footer{margin-top:40px;background:#0b1220;color:#e5e7eb}
+footer .wrap{display:grid;grid-template-columns:1fr;gap:10px;padding:20px 16px}
+.foot-cta{background:#111827;border-radius:14px;padding:14px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.foot-cta a{background:#22c55e;color:#052e16;padding:12px 16px;border-radius:12px;font-weight:900}
+
+@media (max-width:800px){
+  .hero{grid-template-columns:1fr}
+}
+
   </style>
 </head>
-<body>
-  <header>
-    <h1>Jay Ambe Pan and Colddrinks and Ice Cream Parlour</h1>
-    <p>Serving Since 1996 | Image may vary from actual product.</p>
-  </header>  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
-  </nav>  <div class="container" id="products">
-    <div class="category">
-      <h2>Colddrinks</h2>
-      <div class="product"><span>Thums Up 250ml - ₹20</span><input type="number" min="0" value="0" data-name="Thums Up 250ml" data-price="20" /></div>
-      <div class="product"><span>Sprite 750ml - ₹40</span><input type="number" min="0" value="0" data-name="Sprite 750ml" data-price="40" /></div>
-      <div class="product"><span>Mazaa 1.25L - ₹50</span><input type="number" min="0" value="0" data-name="Mazaa 1.25L" data-price="50" /></div>
-      <div class="product"><span>Kinley Soda 750ml - ₹30</span><input type="number" min="0" value="0" data-name="Kinley Soda 750ml" data-price="30" /></div>
-    </div><div class="category">
-  <h2>Biscuits</h2>
-  <div class="product"><span>Parle G ₹5</span><input type="number" min="0" value="0" data-name="Parle G 5" data-price="5" /></div>
-  <div class="product"><span>Krakjack ₹10</span><input type="number" min="0" value="0" data-name="Krakjack 10" data-price="10" /></div>
-  <div class="product"><span>Good Day ₹10</span><input type="number" min="0" value="0" data-name="Good Day 10" data-price="10" /></div>
-  <div class="product"><span>Jim Jam ₹10</span><input type="number" min="0" value="0" data-name="Jim Jam" data-price="10" /></div>
-  <div class="product"><span>Bourbon ₹10</span><input type="number" min="0" value="0" data-name="Bourbon" data-price="10" /></div>
-</div>
-
-<div class="category">
-  <h2>Dairy Products</h2>
-  <div class="product"><span>Milk 500ml - ₹30</span><input type="number" min="0" value="0" data-name="Milk 500ml" data-price="30" /></div>
-  <div class="product"><span>Buttermilk 400ml - ₹15</span><input type="number" min="0" value="0" data-name="Buttermilk" data-price="15" /></div>
-  <div class="product"><span>Dahi 85g - ₹12</span><input type="number" min="0" value="0" data-name="Dahi" data-price="12" /></div>
-  <div class="product"><span>Shrikhand Dryfruit - ₹250/kg</span><input type="number" min="0" value="0" data-name="Shrikhand Dryfruit" data-price="250" /></div>
-  <div class="product"><span>Shrikhand Rajbhog - ₹300/kg</span><input type="number" min="0" value="0" data-name="Shrikhand Rajbhog" data-price="300" /></div>
-</div>
-
-<button onclick="checkout()">Checkout on WhatsApp</button>
-
-  </div>  <footer>
-    <p>Contact us at: <a href="https://wa.me/919016033730" target="_blank">WhatsApp Us</a></p>
-    <p>&copy; 2025 Jay Ambe Pan and Colddrinks</p>
-  </footer>  <script>
-    function checkout() {
-      const inputs = document.querySelectorAll('input[type="number"]');
-      let message = '*Jay Ambe Pan and Colddrinks Order*%0A';
-      let hasItems = false;
-
-      inputs.forEach(input => {
-        const quantity = parseInt(input.value);
-        if (quantity > 0) {
-          const name = input.dataset.name;
-          const price = parseInt(input.dataset.price);
-          const total = price * quantity;
-          message += `\n${name} x${quantity} = ₹${total}`;
-          hasItems = true;
-        }
-      });
-
-      if (!hasItems) {
-        alert('Please select at least one item.');
-        return;
-      }
-
-      const phone = '9016033730'; // 
-      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-      window.open(url, '_blank');
-    }
-  </script></body>
+<body><header>
+  <div class="nav">
+    <div class="brand">Jay Ambe Pan & Coldrinks</div>
+    <a class="cta" href="https://wa.me/9016033730" target="_blank">Order on WhatsApp</a>
+  </div>
+</header><section class="hero">
+  <div class="hero-card">
+    <h1>Fresh • Hygienic • Daily Made</h1>
+    <p>Pan, Cold Drinks, Ice Cream & Shrikhand — quick WhatsApp orders.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#products">View Products</a>
+      <a class="btn outline" href="#contact">Contact</a>
+    </div>
+  </div>
+  <div class="hero-img"></div>
+</section><div class="wrap">
+  <div class="section-title">
+    <h2 id="products">Popular Products</h2>
+    <div class="chips">
+      <span class="chip">Pan</span>
+      <span class="chip">Cold Drinks</span>
+      <span class="chip">Ice Cream</span>
+      <span class="chip">Shrikhand</span>
+    </div>
+  </div>  <div class="grid">
+    <div class="card">
+      <img src="images/thumsup.jpg" alt="Thums Up">
+      <h3>Thums Up</h3>
+      <div class="price">₹20</div>
+      <a class="order" href="https://wa.me/9016033730?text=Order%20Thums%20Up">Order</a>
+    </div>
+    <div class="card">
+      <img src="images/sprite.jpg" alt="Sprite">
+      <h3>Sprite</h3>
+      <div class="price">₹20</div>
+      <a class="order" href="https://wa.me/9016033730?text=Order%20Sprite">Order</a>
+    </div>
+    <div class="card">
+      <img src="images/icecream.jpg" alt="Ice Cream">
+      <h3>Ice Cream Cup</h3>
+      <div class="price">₹30</div>
+      <a class="order" href="https://wa.me/9016033730?text=Order%20Ice%20Cream">Order</a>
+    </div>
+    <div class="card">
+      <img src="images/shrikhand.jpg" alt="Shrikhand">
+      <h3>Dryfruit Shrikhand</h3>
+      <div class="price">₹40 <span class="note">/100g</span></div>
+      <a class="order" href="https://wa.me/9016033730?text=Order%20Shrikhand">Order</a>
+    </div>
+  </div>  <div class="why">
+    <div class="w"><strong>Fresh Daily</strong><br/><span class="note">Made every morning</span></div>
+    <div class="w"><strong>Quick Service</strong><br/><span class="note">Fast WhatsApp orders</span></div>
+    <div class="w"><strong>Trusted Taste</strong><br/><span class="note">Local favourite</span></div>
+  </div>
+</div><footer id="contact">
+  <div class="wrap">
+    <div class="foot-cta">
+      <div>
+        <strong>Visit Us</strong><br/>
+        Opp. Bus Stand, Bhanvad
+      </div>
+      <a href="https://wa.me/9016033730" target="_blank">Chat on WhatsApp</a>
+    </div>
+    <small>© Jay Ambe Pan & Coldrinks • Image may vary from actual product.</small>
+  </div>
+</footer></body>
 </html>
